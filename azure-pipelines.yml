@@ -7,7 +7,9 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+
+#  vmImage: ubuntu-latest # This means the job will run on MS-hosted agents(MS hosted compute). Needs parallelism purchase.
+  name: 'Default' # Agent pool now changed to self-hosted agents. Jobs will run on my laptop.
 
 strategy:
   matrix:
